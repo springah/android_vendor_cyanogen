@@ -17,6 +17,10 @@ PRODUCT_MODEL := Cliq
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_ID=FRG83 BUILD_DISPLAY_ID=FRG83 BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.2.1/FRG83/60505:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.2.1 FRG83 60505 release-keys"
 
+# Include the Torch and FM apps
+PRODUCT_PACKAGES += \
+    FM
+
 # Extra Morrison overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/morrison
 
@@ -39,3 +43,5 @@ endif
 
 PRODUCT_COPY_FILES +=  \
     vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/morrison
